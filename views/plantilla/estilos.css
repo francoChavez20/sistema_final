@@ -1,0 +1,39 @@
+
+/*footer*/
+#footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-color: #CD73ED;
+    justify-content: space-around;
+}
+
+.footer1,
+.footer2,
+.footer3 {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 33%;
+    height: auto; 
+    min-height: 300px;
+    background-color: #CD73ED;
+}
+
+.item-footer {
+    margin: 10px 0 0 10px;
+    display: flex;
+    color: black;
+}
+
+.imagen-cont img {
+    background: #F4E5FF;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.item-footer2{
+    display: inline;
+    color: black;
+}

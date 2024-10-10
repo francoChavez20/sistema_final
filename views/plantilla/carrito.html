@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrito</title>
+    <!--BARRA-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <!--BARRA-->
+</head>
+
+<body style="background-color: #F4E5FF;">
+    <div class="container-fluid p-0">
+        <!--BARRA 2-->
+        <nav class="navbar navbar-expand-lg" style="background-color: #b040f1;" data-bs-theme="dark">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">
+                    <img src="IMG/mils.png" alt="Bootstrap" width="80" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                style="background: #c87ef3;margin-right: 70px;font-size: 17px; border-radius: 10px;"
+                                aria-current="page" href="index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                                style="background: #c87ef3;margin-right: 70px;font-size: 17px; border-radius: 10px;"
+                                href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorias </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="damas.html">Damas</a></li>
+                                <li><a class="dropdown-item" href="caballeros.html">Caballeros</a></li>
+                                <li><a class="dropdown-item" href="niños y niñas.html">Niños y Niñas</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                style="background: #c87ef3;margin-right: 70px;font-size: 17px; border-radius: 10px;"
+                                href="lo mas vendido.html">Lo mas vendido</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                style="background: #c87ef3;margin-right: 70px;font-size: 17px; border-radius: 10px;"
+                                href="promociones.html">Promociones</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                style="background: #c87ef3;margin-right: 70px;font-size: 17px; border-radius: 10px;"
+                                href="conocenos.html">Conocenos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                style="background: #c87ef3;margin-left: 70px; margin-right: 70px;font-size: 17px; border-radius: 10px;"
+                                href="calificaciones.html">Calificaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                style="background: #c87ef3;margin-right: 70px;font-size: 17px; border-radius: 10px;"
+                                href="historial.html">Historia</a>
+                        </li>
+
+
+                    </ul>
+                    <!--BUSCAR-->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-4" type="search" placeholder="Buscar Información"
+                            aria-label="Search" style="background-color: #c680ee;">
+                        <button class="btn btn-outline-success" type="submit"
+                            style="background-color: #c786fc;">Buscar</button>
+
+
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="carrito.html"><img src="IMG/carrito-removebg-preview.png" alt="50"
+                                        height="60"></a>
+                            </li>
+                            <!--despegable de usuario-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" style="margin-right: 80px;" href="" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><img src="IMG/usuario.png" alt="60"
+                                        height="50"></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="perfilUsuario.html">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="carrito.html">Carrito</a
+                                            style="background-color: #c786fc;"></li>
+                                    <li><a class="dropdown-item" href="favoritosUsuarios.html">Mis Favoritos</a></li>
+                                    <li><a class="dropdown-item" href="login.html">Cerrar Sesión</a
+                                            style="background-color: #c786fc;"></li>
+
+
+
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </form>
+                    <!--BUSCAR-->
+                </div>
+            </div>
+        </nav>
+        <!--BARRA 2-->
+    </div>
+    <!--relleno-->
+    <div class="w-100 row m-0" style="background-color: #F4E5FF;">
+
+        <div id="productos" class="w-75" style="min-height: 900px;">
+            <h3 class="text-center"> <strong>PRODUCTOS</strong></h3>
+            <div class="card w-100 row m-0 mb-1" style="height: 250px;">
+                <img src="https://m.media-amazon.com/images/I/81Euh128D4L._AC_SY550_.jpg" alt=""
+                    class="h-100 p-0 col-2">
+                <div id="producto" class="p-0 col-4 h-100">
+                    <p> <strong>MIGU Ropa de verano para niñas</strong> </p>
+                    <p> <strong>Color: </strong> Rosa </p>
+                    <p> <strong>Material: </strong> 100% algodón </p>
+                    <p> <strong>Talla: </strong> 4 años </p>
+                </div>
+                <div id="precio" class="col-1 p-0 h-100"><input id="precio_p1" type="hidden" value="30"
+                        readonly>S/.30.00</div>
+                <div id="cantidad" class="col-3 p-4 h-100 row">
+                    <button class="btn btn-danger col-2 h-50 m-1" onclick="restarcantidad();">-</button>
+                    <input id="cantidad_p1" type="number" class="col-6 h-50 m-1" value="1">
+                    <button class="btn btn-success col-2 h-50 m-1" onclick="sumarcantidad();">+</button>
+                </div>
+                <div id="subtotal" class="col-1 p-0 h-100">S/.0.00</div>
+                <div class="col-1">
+                    <button class="btn btn-danger">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="card w-100 row m-0 mb-1" style="height: 250px;">
+                <img src="https://m.media-amazon.com/images/I/61AS3ppgPML._AC_SX342_.jpg" alt=""
+                    class="h-100 p-0 col-2">
+                <div id="producto" class="p-0 col-4 h-100">
+                    <p> <strong>MIGU Ropa de verano para niñas</strong></p>
+                    <p> <strong>Color: </strong> Amarillo </p>
+                    <p> <strong>Material: </strong> 100% algodón </p>
+                    <p> <strong>Talla: </strong> 8 años </p>
+                </div>
+                <div id="precio" class="col-1 p-0 h-100"><input id="precio_p1" type="hidden" value="30"
+                        readonly>S/.30.00</div>
+                <div id="cantidad" class="col-3 p-4 h-100 row">
+                    <button class="btn btn-danger col-2 h-50 m-1" onclick="restarcantidad();">-</button>
+                    <input id="cantidad_p1" type="number" class="col-6 h-50 m-1" value="1">
+                    <button class="btn btn-success col-2 h-50 m-1" onclick="sumarcantidad();">+</button>
+                </div>
+                <div id="subtotal" class="col-2 p-0 h-100">S/.90.00</div>
+            </div>
+
+            <div class="card w-100 row m-0 mb-1" style="height: 250px;">
+                <img src="https://m.media-amazon.com/images/I/71IxTVfNzNL._AC_SX342_.jpg" alt=""
+                    class="h-100 p-0 col-2">
+                <div id="producto" class="p-0 col-4 h-100">
+                    <p> <strong>Ropa de verano para niños</strong></p>
+                    <p> <strong>Color: </strong> Tricolor </p>
+                    <p> <strong>Material: </strong> 100% algodón </p>
+                    <p> <strong>Talla: </strong> 10 años </p>
+                </div>
+                <div id="precio" class="col-1 p-0 h-100"><input id="precio_p1" type="hidden" value="30"
+                        readonly>S/.30.00</div>
+                <div id="cantidad" class="col-3 p-4 h-100 row">
+                    <button class="btn btn-danger col-2 h-50 m-1" onclick="restarcantidad();">-</button>
+                    <input id="cantidad_p1" type="number" class="col-6 h-50 m-1" value="1">
+                    <button class="btn btn-success col-2 h-50 m-1" onclick="sumarcantidad();">+</button>
+                </div>
+                <div id="subtotal" class="col-2 p-0 h-100">S/.90.00</div>
+            </div>
+
+        </div>
+        <!--medios de pagpo-->
+
+        <div id="monto" class="w-25" style=" height: 200px;">
+            <h4 class="text-center"> <strong>INFORMACIÓN DE PAGO</strong></h4>
+            <H5>Subtotal : S/. 90.00</H5>
+            <div class="row col-12">
+                <H5 class="col-6">Cód. de Descuento : </H5> <input class="col-6" type="text">
+            </div>
+            <h5>Descuento: S/. 10.00</h5>
+            <h5>Costo de Envío: S/. 15.00</h5>
+            <H4>Total : S/. 85.00</H4>
+            <div id="medios_pago" class="col-12">
+                <a href="https://www.yape.com.pe/" target="_blank"><img class="col-3 m-2"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Yape_text_app_icon.png/250px-Yape_text_app_icon.png"
+                        alt=""></a>
+                <a href="https://www.viabcp.com/" target="_blank"><img class="col-3 m-2"
+                        src="https://www.visa.com.pe/dam/VCOM/regional/lac/SPA/Default/Partner%20With%20Us/Info%20for%20Partners/Info%20for%20Small%20Business/visa-pos-800x400.jpg"
+                        alt=""></a>
+                <a href="https://www.pagoefectivo.la/pe/" target="_blank"><img class="col-3 m-2"
+                        src="https://paginasweb.pe/wp-content/uploads/2016/05/pagoefectivo.png" alt=""></a>
+            </div>
+            <div class="text-center d-grid gap-2 col-6 mx-auto">
+                <a href="" class="btn btn-success">Pagar</a>
+                <a href="index.html" class="btn btn-primary">Seguir Comprando</a>
+            </div>
+
+        </div>
+        <!--footer 1-->
+        <div id="footer" class="col-12" style="background: rgb(208, 106, 255); height: 200px;">
+
+            <!--footer1-->
+
+            <div id="footer">
+                <!--Pie de Página Pt 1-->
+                <div class="footer1">
+                    <div class="item-footer">
+                        <img src="IMG/ubicacion.png" alt="" width="50px">
+                        <p>
+                        <h2>Jr. Chavez Gavilán- #S/N referencia por la divincri, Huanta, Peru </h2>
+                        </p>
+                    </div>
+                    <br>
+                    <div class="item-footer">
+                        <img src="IMG/telefono-removebg-preview.png" alt="" width="50px">
+                        <p>
+                        <h2> 987654321 </h2>
+                        </p>
+                    </div>
+                    <br>
+                    <div class="item-footer">
+                        <img src="IMG/email.png" alt="" width="50px">
+                        <p>
+                        <h2> MILS.COM@Gmail.com </h2>
+                        </p>
+                    </div>
+
+                </div>
+
+                <!--Pie de Página Pt 2-->
+                <div class="footer2">
+                    <br>
+                    <div class="item-footer">
+                        <img src="IMG/reloj.png" alt="" width="50px">
+                        <p>
+                        <h2>ABIERTO LAS 24/6 </h2>
+                        </p>
+                    </div>
+                    <br>
+                    <div class="item-footer">
+                        <img src="IMG/estrella.png" alt="" width="50px">
+                        <p>
+                        <h2>Calificación (1923 Comentarios)</h2>
+                        </p>
+                    </div>
+                </div>
+
+                <!--Pie de Página Pt 3-->
+                <div class="footer3">
+                    <div class="item-footer2">
+                        <p>
+                        <h1>Medios de pago</h1>
+                        </p>
+                        <div class="pago">
+                            <img src="IMG/PayPal.png" alt="" width="100px" height="60px">
+                            <img src="IMG/yape.png" alt="" width="100px" height="60px">
+                            <img src="IMG/plin.png" alt="" width="100px" height="60px">
+                            <img src="IMG/visa.jpg" alt="" width="100px" height="60px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script>
+    function sumarcantidad() {
+        var precio = document.getElementById('precio_p1').value;
+        var cantidad = document.getElementById('cantidad_p1').value;
+        var nueva_cantidad = parseInt(cantidad) + 1;
+        document.getElementById('cantidad_p1').value = nueva_cantidad;
+        calcular_subtotal(precio, nueva_cantidad);
+    }
+    function restarcantidad() {
+        var precio = document.getElementById('precio_p1').value;
+        var cantidad = document.getElementById('cantidad_p1').value;
+        if (cantidad > 1) {
+            var nueva_cantidad = parseInt(cantidad) - 1;
+            document.getElementById('cantidad_p1').value = nueva_cantidad;
+            calcular_subtotal(precio, nueva_cantidad);
+        }
+
+    }
+    function calcular_subtotal(precio, cantidad) {
+        var subtotal = precio * cantidad;
+        document.getElementById('subtotal').innerHTML = 'S/. ' + subtotal;
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
