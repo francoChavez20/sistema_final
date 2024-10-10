@@ -39,8 +39,8 @@
                                 y zoom digital de 8x, mantendrá el momento maravilloso claro para niños o niñas.</p>
                         </div><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detallesProducto" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -60,8 +60,8 @@
                                 regalo de bienvenida, regalo de la fiesta y así sucesivamente cualquier escena.</p>
                         </div><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detallesProducto" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -84,8 +84,8 @@
                                 pero en realidad contiene 2 coche dinosaurio, puede estar seguro de comprar.</p>
                         </div><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detallesProducto" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -104,8 +104,8 @@
                                 Forro de capucha estampado</p>
                         </div><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detallesProducto" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>

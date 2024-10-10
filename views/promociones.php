@@ -69,8 +69,8 @@
                             <p> en 12x S/12,50 sin interés</p>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detallesProducto" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,8 @@
                             </p>
                         </div><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detallesProducto" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -112,8 +112,8 @@
                             </p>
                         </div><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detallesProducto" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -132,8 +132,8 @@
                             </p>
                         </div><br>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                        <a href="<?php echo BASE_URL ?>detallesProducto" class="btn btn-primary">Ver Detalles</a>
+                        <a href="<?php echo BASE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
