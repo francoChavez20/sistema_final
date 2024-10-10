@@ -12,7 +12,7 @@ class vistaModelo
             'producto',
             'niñosyniñas',
             'lomasvendido',
-            'detalles_producto',
+            'detallesProducto',
             'damas',
             'conocenos',
             'calificaciones',

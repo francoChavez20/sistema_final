@@ -86,7 +86,7 @@
 
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a href="carrito.html"><img src="./views/plantilla/IMG/carrito-removebg-preview.png" alt="50"
+                                <a href="<?php echo BASE_URL ?>carrito"><img src="./views/plantilla/IMG/carrito-removebg-preview.png" alt="50"
                                         height="60"></a>
                             </li>
                             <!--despegable de usuario-->

@@ -6,7 +6,7 @@ const  DB_USER = '';
 const  DB_PASSWORD = '';
 
 //ingresar link de proyecto
-const  BASE_URL = 'http://localhost/ventas25/';
+const  BASE_URL = 'http://localhost/sistema/';
 
 
 
