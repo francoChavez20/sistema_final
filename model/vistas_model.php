@@ -20,7 +20,8 @@ class vistaModelo
             'favoritosUsuarios',
             'historial',
             'inicio',
-            'perfilUsuario'
+            'perfilUsuario',
+            'nuevo-producto'
 
         ];
         if (in_array($vista, $palabras_permitidas)) {
