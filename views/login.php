@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
-           
+
         }
 
         body {
@@ -20,8 +20,9 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(rgba(159, 97, 230, 0.5), rgb(100, 0, 194));
-            
+
         }
+
         .login-container {
             background: linear-gradient(60deg, rgb(85, 47, 173)25%, rgb(153, 122, 226)75%);
             border-radius: 15px;
@@ -68,7 +69,7 @@
 
         img {
             border-radius: 50%;
-            opacity:75% ;
+            opacity: 75%;
         }
     </style>
 </head>
@@ -81,7 +82,7 @@
             <h2>INICIAR SESION</h2>
             <img src="https://i.pinimg.com/236x/fd/65/70/fd65706dee7cc8955629c785b16b8b9d.jpg" alt="..."
                 border-radios:50%;>
-            <form action="<?php echo BASE_URL;?>producto">
+            <form action="<?php echo BASE_URL; ?>producto">
 
                 <div class="mb-3 p-1">
                     <input type="text" id="username" class="form-control" placeholder="Ingresar usuario">
@@ -91,7 +92,7 @@
                     <input type="password" id="password" class="form-control" placeholder="Ingresar contraseña">
                 </div>
 
-                <a href="<?php echo BASE_URL ?>productos" class="btn btn-primary" >INICIAR SESION</a>
+                <a href="<?php echo BASE_URL ?>productos" class="btn btn-primary">INICIAR SESION</a>
             </form>
         </div>
     </div>

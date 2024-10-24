@@ -95,7 +95,10 @@
         </div>
         <button type="button" onclick="registrar_producto();">Enviar</button>
     </form>
+
     <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>listar_categorias();</script>
 
 </body>

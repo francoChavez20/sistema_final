@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?php echo BASE_URL ?>/views/plantilla/estilos.css">
     <!--BARRA-->
     <script>
-        const base_url ='<?php echo BASE_URL?>';
+        const base_url = '<?php echo BASE_URL ?>';
     </script>
 </head>
 
