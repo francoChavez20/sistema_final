@@ -77,7 +77,9 @@
         </div>
         <div>
             <label for="categoria">Categoría</label>
-            <input type="text" id="categoria"  name="categoria" placeholder="Categoría" required>
+            <select name="categoria" id="categoria" required>
+                <option>-- seleccione --</option>
+                </select> 
         </div>
         <div>
             <label for="fecha_vencimiento">Fecha de Vencimiento</label>
