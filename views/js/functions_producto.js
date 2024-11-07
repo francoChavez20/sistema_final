@@ -42,22 +42,55 @@ async function listar_categorias() {
             'controller/Categoria.php?tipo=listar');
             json = await respuesta.json();
             if (json.status) {
+
                 let datos = json.contenido;
+                let contenido_select = '<option value="">Seleccione</option>';
+                  //se trabaja con jquery
                 datos.forEach(element =>{
-                    $('#categoria').append($('<option  />'),{
-                        text:  `$
-                        
-                        
-                        
-                        {element.nombre}`,
+                    contenido_select += `<option value="${element.id}">${element.nombre}</option>`
+                   /* $('#categoria').append($('<option  />',{
+                        text:  `${element.nombre}`,
                         value: `${element.id}`
 
-                    });
+                    }));*/
                 });
+                document.getElementById('categoria').innerHTML =
+                contenido_select;
             }
 
+             console.log(respuesta);
     } catch (e) {
         console.log("Error al cargar categorias" +
+            e);
+    }
+
+}
+//proveedor 
+async function listar_proveedor() {
+    try {
+        let respuesta = await fetch(base_url + 
+            'controller/proveedor.php?tipo=listar');
+            json = await respuesta.json();
+            if (json.status) {
+
+                let datos = json.contenido;
+                let contenido_select = '<option value="">Seleccione</option>';
+                  //se trabaja con jquery
+                datos.forEach(element =>{
+                    contenido_select += `<option value="${element.id}">${element.razon_social}</option>`
+                   /* $('#categoria').append($('<option  />',{
+                        text:  `${element.nombre}`,
+                        value: `${element.id}`
+
+                    }));*/
+                });
+                document.getElementById('proveedor').innerHTML =
+                contenido_select;
+            }
+
+             console.log(respuesta);
+    } catch (e) {
+        console.log("Error al cargar proveedor" +
             e);
     }
 

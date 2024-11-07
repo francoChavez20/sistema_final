@@ -10,10 +10,14 @@ class ProductoModel
     }
     public function registrarProducto($codigo, $nombre, $detalle, $precio, $stock, $categoria, $fecha_v, $imagen, $proveedor)
     {
-        
+
         $sql = $this->conexion->query("CALL insertProducto('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}','{$categoria}','$fecha_v','{$imagen}','{$proveedor}')");
 
         $sql = $sql->fetch_object();
         return $sql;
+    }
+    public function actualizar_imagen($id, $imagen)
+    {
+        $sql = $this->conexion->query("UPDATE producto SET imagen='{$imagen})' WHERE id = '{$id}'");
     }
 }

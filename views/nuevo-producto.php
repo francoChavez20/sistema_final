@@ -88,13 +88,15 @@
         </div>
         <div>
             <label for="imagen">Imagen</label>
-            <input type="text" id="imagen" name="imagen"  placeholder="URL de la Imagen" required>
+            <input type="file" id="imagen" name="imagen"  placeholder="URL de la Imagen" required>
         </div>
         <div>
             <label for="proveedor">Proveedor</label>
-            <input type="text" id="proveedor"  name="proveedor" placeholder="Proveedor" required>
-
+            <select name="proveedor" id="proveedor" required>
+                <option>-- seleccione --</option>
+                </select> 
         </div>
+
         <button type="button" onclick="registrar_producto();">Enviar</button>
     </form>
 
@@ -102,5 +104,6 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script>listar_categorias();</script>
+    <script>listar_proveedor();</script>
 
 </body>
