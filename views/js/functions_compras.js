@@ -1,4 +1,4 @@
-async function registrar_compra(){
+async function registrar_compras() {
     let producto = document.querySelector('#id_producto').value;
     let cantidad = document.querySelector('#cantidad').value;
     let precio = document.querySelector('#precio').value;
@@ -13,15 +13,15 @@ async function registrar_compra(){
     try {
         // Capturamos datos del formulario HTML
         const datos = new FormData(RegistrarCompra);
-        
+
         // Enviar datos hacia el controlador
         let respuesta = await fetch(base_url + 'controller/Compra.php?tipo=registrar', {
-            method: 'POST', 
+            method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
             body: datos
         });
-        
+
         let json = await respuesta.json();
         if (json.status) {
             swal("Registro", json.mensaje, "success");
@@ -35,7 +35,7 @@ async function registrar_compra(){
     }
 }
 
-async function listar_productos(){
+async function listar_productos() {
     try {
         let respuesta = await fetch(base_url + 'controller/listar_producto.php?tipo=listar');
         let json = await respuesta.json();
@@ -55,10 +55,10 @@ async function listar_productos(){
     }
 }
 
-async function listar_trabajadores(){
+async function listar_trabajadores() {
     try {
         let respuesta = await fetch(base_url + 'controller/Trabajador.php?tipo=listar');
-         let json = await respuesta.json();
+        let json = await respuesta.json();
 
         if (json.status) {
             let datos = json.contenido;
@@ -68,6 +68,7 @@ async function listar_trabajadores(){
                 contenido_select += '<option value="' + element.id + '">' + element.razon_social + '</option>';
             });
             document.getElementById('id_trabajador').innerHTML = contenido_select;
+            
         } else {
             console.log("No se encontraron trabajadores.");
         }

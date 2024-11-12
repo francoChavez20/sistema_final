@@ -27,7 +27,7 @@ class categoriaModel
 
     public function obtener_categorias(){
         $arrRespuesta = array();
-        $respuesta = $this->conexion->query("SELECT * FROM categoria");
+        $respuesta = $this->conexion->query("SELECT * FROM categorias");
         while ($objeto = $respuesta->fetch_object()){
             array_push($arrRespuesta, $objeto);
         }

@@ -10,7 +10,7 @@ class RegistrarComprasModel {
     }
 
   
-    public function registrarCompra($id_producto, $cantidad, $precio, $fecha_compra, $id_trabajador) {
+    public function registrarCompras($id_producto, $cantidad, $precio, $fecha_compra, $id_trabajador) {
         $sql = $this->conexion->query("CALL insertCompras('{$id_producto}', '{$cantidad}', '{$precio}', '{$fecha_compra}', '{$id_trabajador}')");
         $sql = $sql->fetch_object();
         return $sql;
