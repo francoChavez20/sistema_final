@@ -21,7 +21,10 @@ class vistaModelo
             'historial',
             'inicio',
             'perfilUsuario',
-            'nuevo-producto'
+            'nuevo-producto',
+            'registrar-categoria',
+            'registrar-persona',
+            'registrar-compra'
 
         ];
         if (in_array($vista, $palabras_permitidas)) {
