@@ -17,17 +17,18 @@ if ($tipo == "registrar") {
         $direccion = $_POST['direccion'];
         $rol = $_POST['rol'];
         $password = $_POST['password'];
-        $estado = $_POST['estado'];
-        $fecha_reg = $_POST['fecha_reg'];
+        
 
         if (
             $nro_identidad == "" || $razon_social == "" || $telefono == "" || $correo == "" ||
             $departamento == "" || $provincia == "" || $distrito == "" || $cod_postal == "" ||
-            $direccion == "" || $rol == "" || $password == "" || $estado == "" || $fecha_reg == ""
+            $direccion == "" || $rol == "" || $password == "" 
         ) {
            
             $arr_Respuestas = array('status' => false, 'mensaje' => 'Error, campos vacíos');
         } else {
+
+            $password_hash = password_hash($password, PASSWORD_BCRYPT);
             // Llamada al método para registrar persona
             $arrPersona = $objPersona->registrarPersonas(
                 $nro_identidad,
@@ -40,9 +41,8 @@ if ($tipo == "registrar") {
                 $cod_postal,
                 $direccion,
                 $rol,
-                $password,
-                $estado,
-                $fecha_reg
+                $password_hash,
+               
             );
 
             if ($arrPersona->id > 0) {

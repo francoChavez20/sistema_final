@@ -160,5 +160,6 @@
         </form>
     </div>
     <script src="<?php echo BASE_URL ?>views/js/functions_personas.js"></script>
+    
 </body>
 </html>

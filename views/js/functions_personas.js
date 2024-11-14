@@ -10,13 +10,12 @@ async function registrar_personas() {
     let direccion = document.querySelector('#direccion').value;
     let rol = document.querySelector('#rol').value;
     let password = document.querySelector('#password').value;
-    let estado = document.querySelector('#estado').value;
-    let fecha_reg = document.querySelector('#fecha_reg').value;
+    
 
     if (
         nro_identidad == "" || razon_social == "" || telefono == "" || correo == "" ||
         departamento == "" || provincia == "" || distrito == "" || cod_postal == "" ||
-        direccion == "" || rol == "" || password == "" || estado == "" || fecha_reg == ""
+        direccion == "" || rol == "" || password == "" 
     ) {
         alert("Error, campos vacíos");
         return;

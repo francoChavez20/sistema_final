@@ -102,8 +102,9 @@
                                     <li><a class="dropdown-item" href="<?php echo BASE_URL ?>carrito">Carrito</a
                                             style="background-color: #c786fc;"></li>
                                     <li><a class="dropdown-item" href="<?php echo BASE_URL ?>favoritosUsuarios">Mis Favoritos</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo BASE_URL ?>login">Cerrar Sesión</a
-                                            style="background-color: #c786fc;"></li>
+                                    <li><a class="dropdown-item" onclick="cerrar_sesion();">Cerrar Sesión</a 
+                                    style="background-color: #c786fc;"></li>
+                                    
 
 
 

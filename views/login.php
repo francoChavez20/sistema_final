@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script>
+        const base_url = '<?php echo BASE_URL; ?>';
+    </script>
     <style>
         body,
         html {
+
+            
             margin: 0;
             padding: 0;
             height: 100%;
@@ -82,21 +87,23 @@
             <h2>INICIAR SESION</h2>
             <img src="https://i.pinimg.com/236x/fd/65/70/fd65706dee7cc8955629c785b16b8b9d.jpg" alt="..."
                 border-radios:50%;>
-            <form action="<?php echo BASE_URL; ?>producto">
+            <!-- OJO: Este formulario se utiliza para el inicio de sesión -->
+            <form action="" id="frm_iniciar_sesion">
 
                 <div class="mb-3 p-1">
-                    <input type="text" id="username" class="form-control" placeholder="Ingresar usuario">
+                    <input type="text" id="usuario" class="form-control" placeholder="Ingresar usuario" name="usuario"  required>
                 </div>
                 <div class="mb-3 p-1">
 
-                    <input type="password" id="password" class="form-control" placeholder="Ingresar contraseña">
+                    <input type="password" id="password" class="form-control" name="password" placeholder="Ingresar contraseña">
                 </div>
-
-                <a href="<?php echo BASE_URL ?>productos" class="btn btn-primary">INICIAR SESION</a>
+                <!-- ojo-->
+                <button type="submit" class="btn btn-primary">Iniciar sesion</button>
             </form>
         </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo BASE_URL; ?>views/js/functions_login.js"></script>
 
 </html>
