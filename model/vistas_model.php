@@ -26,11 +26,12 @@ class vistaModelo
             'nuevo-producto',
             'registrar-categoria',
             'registrar-persona',
-            'registrar-compra' ];
+            'registrar-compra',
+            'adminProducto' ];
 
-            if (!isset($_SESSION['sesion_ventas_id'])) {
+            /*if (!isset($_SESSION['sesion_ventas_id'])) {
                 return "login";
-            }
+            }*/
 
         if (in_array($vista, $palabras_permitidas)) {
             if (is_file("./views/" . $vista . ".php")) {

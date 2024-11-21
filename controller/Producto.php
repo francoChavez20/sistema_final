@@ -1,15 +1,43 @@
 <?php
 require_once('../model/productoModel.php');
+require_once('../model/categoriaModel.php');
+require_once('../model/personasModel.php');
+
 $tipo = $_REQUEST['tipo'];
+
 //instancio la clase modeloproducto
 $objProducto = new ProductoModel();
+$objCategoria = new CategoriaModel();
+$objPersona = new personasModel();
+
+if ($tipo == "listar") {
+    $arr_Respuesta = array('status' => false, 'contenido' => '');
+    $arr_productos = $objProducto->obtener_producto();
+
+    if (!empty($arr_productos)) {
+        //recorremos el array para agregar las opciones de las categorias
+        for ($i = 0; $i < count($arr_productos); $i++) {
+
+            $id_categoria = $arr_productos[$i]->id_categoria;
+            $r_categoria = $objCategoria->obtener_categoria($id_categoria);
+            $arr_productos[$i]->categoria = $r_categoria;
+
+
+            $id_producto = $arr_productos[$i]->id;
+            $id_producto = $arr_productos[$i]->nombre;
+            $opciones = '';
+            $arr_productos[$i]->options =  $opciones;
+        }
+        $arr_Respuesta['status'] = true;
+        $arr_Respuesta['contenido'] = $arr_productos;
+    }
+    echo json_encode($arr_Respuesta);
+}
+
 
 if ($tipo == "registrar") {
     //print_r($_POST);
     //echo $_FILES['imagen']['name'];
-
-
-
     if ($_POST) {
         $codigo  = $_POST['codigo'];
         $nombre  = $_POST['nombre'];
@@ -42,11 +70,9 @@ if ($tipo == "registrar") {
 
                 if (move_uploaded_file($archivo, $destino . $nombre)) {
                     $arr_imagen = $objProducto->actualizar_imagen($id, $nombre);
-                    
-                }else {
-                    $arr_Respuestas =array ('status'=>true,'mensaje'=>'resgistro exitoso, error al subir imagen');
-                   }
-
+                } else {
+                    $arr_Respuestas = array('status' => true, 'mensaje' => 'resgistro exitoso, error al subir imagen');
+                }
             } else {
                 $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al Registrar Producto');
             }
@@ -54,5 +80,3 @@ if ($tipo == "registrar") {
         }
     }
 }
-
-

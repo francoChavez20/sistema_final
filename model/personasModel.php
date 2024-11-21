@@ -1,13 +1,16 @@
 <?php
 require_once "../librerias/conexion.php";
-class personasModel {
+class personasModel
+{
     private $conexion;
 
-    function __construct() {
+    function __construct()
+    {
         $this->conexion = new Conexion();
         $this->conexion = $this->conexion->connect();
     }
-    public function registrarPersonas($nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, $distrito, $cod_postal, $direccion, $rol, $password) {
+    public function registrarPersonas($nro_identidad, $razon_social, $telefono, $correo, $departamento, $provincia, $distrito, $cod_postal, $direccion, $rol, $password)
+    {
         $sql = $this->conexion->query("CALL insertPersonas(
             '{$nro_identidad}', '{$razon_social}', '{$telefono}', '{$correo}', 
             '{$departamento}', '{$provincia}', '{$distrito}', '{$cod_postal}', 
@@ -16,10 +19,10 @@ class personasModel {
         $sql = $sql->fetch_object();
         return $sql;
     }
-    public function buscarPersonaPorDNI($dni){
-        $sql =$this->conexion->query("SELECT * FROM persona WHERE nro_identidad ='{$dni}'");
+    public function buscarPersonaPorDNI($dni)
+    {
+        $sql = $this->conexion->query("SELECT * FROM persona WHERE nro_identidad ='{$dni}'");
         $sql = $sql->fetch_object();
         return $sql;
     }
 }
-?>
