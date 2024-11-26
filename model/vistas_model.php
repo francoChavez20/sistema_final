@@ -29,13 +29,14 @@ class vistaModelo
             'registrar-compra',
             'adminProducto',
             'adminCategoria',
-            'adminProveedor' ,
-        'adminUsuario',
-        'adminCompras'];
+            'adminProveedor',
+            'adminUsuario',
+            'adminCompras'
+        ];
 
-            if (isset($_SESSION['sesion_ventas_id'])) {
-                return "login";
-            }
+        if (isset($_SESSION['sesion_ventas_id'])) {
+            return "login";
+        }
 
         if (in_array($vista, $palabras_permitidas)) {
             if (is_file("./views/" . $vista . ".php")) {

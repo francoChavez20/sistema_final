@@ -68,10 +68,9 @@ if ($tipo == "registrar") {
 
                 $nombre = $arrProducto->id . "." . $tipoArchivo;
 
-                if (move_uploaded_file($archivo, $destino . $nombre)) {
-                    $arr_imagen = $objProducto->actualizar_imagen($id, $nombre);
+                if (move_uploaded_file($archivo, $destino . '' . $nombre)) {
                 } else {
-                    $arr_Respuestas = array('status' => true, 'mensaje' => 'resgistro exitoso, error al subir imagen');
+                    $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso, error al subir imagen');
                 }
             } else {
                 $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al Registrar Producto');

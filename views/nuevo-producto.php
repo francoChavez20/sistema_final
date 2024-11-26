@@ -88,7 +88,7 @@
         </div>
         <div>
             <label for="imagen">Imagen</label>
-            <input type="file" id="imagen" name="imagen"  placeholder="URL de la Imagen" required>
+            <input type="file"class="form-control" required id="imagen" name="imagen"  placeholder="URL de la Imagen" >
         </div>
         <div>
             <label for="proveedor">Proveedor</label>
