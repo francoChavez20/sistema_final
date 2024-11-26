@@ -52,5 +52,11 @@ class ListarProductoModel {
 
         return $arrRespuesta;
     }
+    
+    public function obtener_product($id){
+        $respuesta = $this->conexion->query("SELECT * FROM producto WHERE id  = '$id'");
+        $objeto = $respuesta->fetch_object();
+        return $objeto;
+      }
 }
 ?>

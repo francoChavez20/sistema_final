@@ -1,3 +1,80 @@
+async function listar_proveedor() {
+    try {
+        let respuesta = await fetch(base_url+'controller/Personas.php?tipo=listar');
+        let json = await respuesta.json();
+        if (json.status) {
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item=>{
+                let nueva_fila = document.createElement("tr");
+                nueva_fila.id = "fila_"+item.id;
+                cont+=1;
+                nueva_fila.innerHTML = `
+                <th>${cont}</th>
+                <td>${item.nro_identidad}</td>
+                <td>${item.razon_social}</td>
+                <td>${item.telefono}</td>
+                <td>${item.correo}</td>
+                <td>${item.departamento}</td>
+                <td>${item.provincia}</td>
+                <td>${item.distrito}</td>
+                <td>${item.cod_postal}</td>
+                <td>${item.direccion}</td>
+                <td>${item.rol}</td>
+                <td></td>`;
+
+                document.querySelector('#tbl_proveedor').appendChild(nueva_fila)
+            });
+        }
+        console.log(json);
+    } catch (error) {
+        console.log("oops salio error"+error);
+    }
+}
+
+if (document.querySelector('#tbl_proveedor')) {
+    listar_proveedor();
+}
+
+
+async function listar_usuarios() {
+    try {
+        let respuesta = await fetch(base_url+'controller/Personas.php?tipo=listar_usuarios');
+        let json = await respuesta.json();
+        if (json.status) {
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item=>{
+                let nueva_fila = document.createElement("tr");
+                nueva_fila.id = "fila_"+item.id;
+                cont+=1;
+                nueva_fila.innerHTML = `
+                <th>${cont}</th>
+                <td>${item.nro_identidad}</td>
+                <td>${item.razon_social}</td>
+                <td>${item.telefono}</td>
+                <td>${item.correo}</td>
+                <td>${item.departamento}</td>
+                <td>${item.provincia}</td>
+                <td>${item.distrito}</td>
+                <td>${item.cod_postal}</td>
+                <td>${item.direccion}</td>
+                <td>${item.rol}</td>
+                <td></td>`;
+
+                document.querySelector('#tbl_usuario').appendChild(nueva_fila)
+            });
+        }
+        console.log(json);
+    } catch (error) {
+        console.log("oops salio error"+error);
+    }
+}
+
+if (document.querySelector('#tbl_usuario')) {
+    listar_usuarios();
+}
+
 async function registrar_personas() {
     let nro_identidad = document.getElementById('nro_identidad').value;
     let razon_social = document.querySelector('#razon_social').value;

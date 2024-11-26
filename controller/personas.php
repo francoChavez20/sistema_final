@@ -4,6 +4,47 @@ require_once('../model/personasModel.php');
 $tipo = $_REQUEST['tipo'];
 $objPersona = new personasModel();
 
+if ($tipo == "listar") {
+    $arr_Respuestas = array('status' => false, 'contenido' => '');
+    $arr_proveedor = $objPersona->obtener_proveedores();
+
+    if (!empty($arr_proveedor)) {
+        // recorremos el array para agregar las opciones de la categorias
+        for ($i = 0; $i < count($arr_proveedor); $i++) {
+
+            $id_producto = $arr_proveedor[$i]->id;
+            $proveedor = $arr_proveedor[$i]->razon_social;
+            $opciones = '
+            <a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
+            $arr_proveedor[$i]->options = $opciones;
+        }
+        $arr_Respuestas['status'] = true;
+        $arr_Respuestas['contenido'] = $arr_proveedor;
+    }
+
+    echo json_encode($arr_Respuestas);
+}
+if ($tipo == "listar_usuarios") {
+    $arr_Respuestas = array('status' => false, 'contenido' => '');
+
+    $arr_usuarios = $objPersona->obtener_usuario();
+
+    if (!empty($arr_usuarios)) {
+      
+        for ($i = 0; $i < count($arr_usuarios); $i++) {
+            $id_usuario = $arr_usuarios[$i]->id; 
+            $opciones = '
+            <a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+            <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>';
+            $arr_usuarios[$i]->options = $opciones; 
+        }
+        $arr_Respuestas['status'] = true;
+        $arr_Respuestas['contenido'] = $arr_usuarios;
+    }
+
+    echo json_encode($arr_Respuestas);
+}
+
 if ($tipo == "registrar") {
     if ($_POST) {
         $nro_identidad = $_POST['nro_identidad'];
