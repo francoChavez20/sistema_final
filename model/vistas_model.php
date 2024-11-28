@@ -34,7 +34,7 @@ class vistaModelo
             'adminCompras'
         ];
 
-        if (isset($_SESSION['sesion_ventas_id'])) {
+        if (!isset($_SESSION['sesion_ventas_id'])) {
             return "login";
         }
 
