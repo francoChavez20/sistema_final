@@ -65,6 +65,7 @@ if ($tipo == "registrar") {
                     $_FILES["imagen"]['name'],
                     PATHINFO_EXTENSION
                 ));
+                
 
                 $nombre = $arrProducto->id . "." . $tipoArchivo;
 
