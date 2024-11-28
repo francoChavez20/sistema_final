@@ -7,7 +7,7 @@
                 </div>
                 <div class="card-body text-center" style="background-color: #d79fff;">
                     <img src="https://i.pinimg.com/236x/fd/65/70/fd65706dee7cc8955629c785b16b8b9d.jpg" class="rounded-circle mb-3" alt="Imagen de Perfil">
-                    <h5 class="card-title">Nombre de Usuario</h5>
+                    <h5 class="card-title"><?php echo 'Hola, ' . $_SESSION['sesion_ventas_nombres'] ?></h5>
                     <p class="card-text"><strong>Email:</strong> Mils@correo.com</p>
                     <p class="card-text"><strong>Dirección:</strong> jr.chavez 123, huanta, ayacucho</p>
                     <a href="#" class="btn btn-primary btn-block">Editar Perfil</a>

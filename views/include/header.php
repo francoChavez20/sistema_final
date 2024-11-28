@@ -95,12 +95,10 @@
                             <!--despegable de usuario-->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" style="margin-right: 80px;" href="" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false"><img src="./views/plantilla/IMG/usuario.png" alt="60"
-                                        height="50"></a>
+                                    data-bs-toggle="dropdown" aria-expanded="false"><?php echo 'Hola, ' . $_SESSION['sesion_ventas_nombres'] ?></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="<?php echo BASE_URL ?>perfilUsuario">Perfil</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo BASE_URL ?>carrito">Carrito</a
-                                            style="background-color: #c786fc;"></li>
+                                    <li><a class="dropdown-item" href="<?php echo BASE_URL ?>carrito">Carrito</a style="background-color: #c786fc;"></li>
                                     <li><a class="dropdown-item" href="<?php echo BASE_URL ?>favoritosUsuarios">Mis Favoritos</a></li>
                                     <li><a class="dropdown-item" onclick="cerrar_sesion();">Cerrar Sesión</a 
                                     style="background-color: #c786fc;"></li>
