@@ -60,9 +60,11 @@ if ($tipo == "registrar") {
             
                 //cargar archivos
             $archivo = $_FILES['imagen']['tmp_name'];
-            $destino = '../assets/img_productos/';
+            $destino = './assets/img_productos/';
             $tipoArchivo = strtolower(pathinfo(
                 $_FILES["imagen"]['name'],
+
+                
                 PATHINFO_EXTENSION));
 
             $arrProducto = $objProducto->registrarProducto($codigo, $nombre, $detalle, $precio, $stock, $categoria, $fecha_v, $imagen, $proveedor, $tipoArchivo);
