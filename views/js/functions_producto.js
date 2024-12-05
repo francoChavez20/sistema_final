@@ -14,7 +14,7 @@ async function listar_productos() {
                 <td>${item.codigo}</td>
                 <td>${item.nombre}</td>
                 <td>${item.stock}</td>
-                <td>${item.categoria.nombre}</td>
+                <td>${item.id_categoria}</td>
                 <td>${item.id_proveedor}</td>
                 <td>${item.options}</td>
                 `;
@@ -145,9 +145,10 @@ async function ver_producto(id) {
             document.querySelector('#nombre').value = json.contenido.nombre;
             document.querySelector('#detalle').value = json.contenido.detalle;
             document.querySelector('#precio').value = json.contenido.precio;
-            document.querySelector('#categoria').value = json.contenido.categoria;
+            document.querySelector('#categoria').value = json.contenido.id_categoria;
             document.querySelector('#fecha_v').value = json.contenido.fecha_v;
-            document.querySelector('#proveedor').value = json.contenido.proveedor;
+            document.querySelector('#proveedor').value = json.contenido.id_proveedor;
+            document.querySelector('#img').value = json.contenido.img;
 
 
         }else{
@@ -161,4 +162,23 @@ async function ver_producto(id) {
         console.log("Oops, ocurrio un error" +error);
     }
     
+}
+
+async function actualizar_producto() {
+    const datos = new FormData(frmActualizar);
+    try{
+        
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=actualizar',{
+            method: 'POST', 
+            mode: 'cors',
+            cache:'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+    console.log(json);
+    }catch(e){
+       
+    }
+    
+
 }

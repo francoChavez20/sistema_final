@@ -32,7 +32,8 @@ class vistaModelo
             'adminProveedor',
             'adminUsuario',
             'adminCompras',
-            'editar-producto'
+            'editar-producto',
+            'editar-categoria'
         ];
 
         if (!isset($_SESSION['sesion_ventas_id'])) {

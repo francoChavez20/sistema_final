@@ -78,7 +78,7 @@ async function admin_categoria() {
                 <th>${cont}</th>
                 <td>${item.nombre}</td>
                 <td>${item.detalle}</td>
-                <td></td>`;
+                <td>${item.options}</td>`;
 
                 document.querySelector('#tbl_categoria').appendChild(nueva_fila)
             });
@@ -132,3 +132,33 @@ async function listar_proveedor() {
 }
 
 
+async function ver_categoria(id) {
+    const formData= new FormData();
+    formData.append('id_categoria', id);
+    try {
+        let respuesta = await fetch(base_url +'controller/categoria.php?tipo=ver', {
+            method: 'POST',
+            mode : 'cors',
+            cache: 'no-cache',
+            body : formData
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            
+            document.querySelector('#nombre').value = json.contenido.nombre;
+            document.querySelector('#detalle').value = json.contenido.detalle;
+           
+
+
+        }else{
+            window.location= base_url+"admincategoria";
+        }
+
+        console.log(json);
+
+
+    } catch (error) {
+        console.log("Oops, ocurrio un error" +error);
+    }
+    
+}

@@ -15,6 +15,7 @@
             <th>rol</th>
             
             <th>Acciones</th>
+            
            </tr>
         </thead>
         <tbody id="tbl_proveedor">

@@ -53,10 +53,12 @@
 <body>
     
     <form action="" id="frmRegistrar">
+        <input type="hidden" name ="id_producto" id="id_producto">
+        <input type="hidden" name ="img" id="img">
                <h1>Editar producto</h1>
         <div>
             <label for="codigo">Código</label>
-            <input type="text" id="codigo" name="codigo" placeholder="Código" required>
+            <input type="text" id="codigo" name="codigo" placeholder="Código" readonly disabled>
         </div>
         <div>
             <label for="nombre">Nombre</label>

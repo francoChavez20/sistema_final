@@ -12,15 +12,11 @@
             </tr>
         </thead>
         <tbody id ="tbl_producto">
-            <tr>
-                <!--<td>1</td>
-                <td>123456</td>
-                <td>producto</td>
+           <!--  <td>producto</td>
                 <td>12</td>
                 <td>123</td>
                 <td>lai</td>
                 <td>editar eliminar</td>-->
-            </tr>
 
         </tbody>
     </table>
