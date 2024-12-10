@@ -12,7 +12,7 @@ async function registrar_compras() {
 
     try {
         // Capturamos datos del formulario HTML
-        const datos = new FormData(RegistrarCompra);
+        const datos = new FormData(frmRegistrarCompra);
 
         // Enviar datos hacia el controlador
         let respuesta = await fetch(base_url + 'controller/Compra.php?tipo=registrar', {

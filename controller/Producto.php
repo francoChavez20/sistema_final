@@ -31,9 +31,10 @@ if ($tipo == "listar") {
 
             $id_producto = $arr_productos[$i]->id;
             $producto = $arr_productos[$i]->nombre;
+            //eliminar producto(1)
             $opciones ='
             <a href="'. BASE_URL.'editar-producto/'.$id_producto.'" >Editar<a/>
-            <button onclick ="eliminar_producto('.$id_producto.');">Eliminar</button>';
+            <button onclick="eliminarProducto('.$idProducto.');">Eliminar</button>';
            
             $arr_productos[$i]->options =  $opciones;
             
@@ -106,6 +107,7 @@ if($tipo =="ver"){
     }
     echo json_encode($response);
 }
+
 if($tipo =="actualizar"){
   //  print_r($_POST);
    // print_r($_FILES['imagen']['tmp_name']);
@@ -151,5 +153,16 @@ if($tipo =="actualizar"){
 }
 
 
-//if ($tipo =="eliminar"){
-    # code...
+if ($tipo =="eliminar"){
+        $id_producto = $_POST['id_producto'];
+        $arr_Respuesta = $objProducto->eliminarProducto($id_producto);
+        //print_r($arr_Respuesta);
+        if (empty($arr_Respuesta)){
+            $response = array('status' => false);
+    
+        }else{
+            $response = array('status' => true);
+        }
+        echo json_encode($response);
+    }
+
