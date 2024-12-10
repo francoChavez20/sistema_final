@@ -11,7 +11,7 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody id ="tbl_producto">
+        <tbody id ="tbl_productos">
            <!--  <td>producto</td>
                 <td>12</td>
                 <td>123</td>

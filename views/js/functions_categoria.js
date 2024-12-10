@@ -7,8 +7,8 @@ async function registrar_categorias() {
         return;
     }
     try {
-        const datos = new FormData(RegistrarCategoria);
-        let respuesta = await fetch(base_url + 'controller/categoria.php?tipo=registrar', {
+        const datos = new FormData(frmRegistrarCategoria);
+        let respuesta = await fetch(base_url + 'controller/registrar_categoria.php?tipo=registrar', {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
@@ -132,7 +132,7 @@ async function listar_proveedor() {
 }
 
 
-async function ver_categoria(id) {
+async function editar_categoria(id) {
     const formData= new FormData();
     formData.append('id_categoria', id);
     try {

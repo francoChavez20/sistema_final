@@ -1,3 +1,74 @@
+<body>
+    <div class ="form-container">
+        <form class ="form" action="" id="frmActualizar">
+                           <h1>Editar producto</h1>
+        <input type="hidden" name ="id_producto" id="id_producto">
+        <input type="hidden" name ="img" id="img">
+
+        <div class ="form-row">
+        <div class ="form-colum">
+            <label for="codigo">Código</label>
+            <input type="text" id="codigo" name="codigo" placeholder="Código" readonly disabled>
+        </div>
+        <div class ="form-colum">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre"  name="nombre" placeholder="Nombre" required>
+
+        </div>
+        <div>
+            <label for="detalle">Detalle</label>
+            <input type="text" id="detalle"  name="detalle" placeholder="Detalle" required>
+        </div>
+        <div>
+            <label for="precio">Precio</label>
+            <input type="number" id="precio"    name="precio" placeholder="Precio" required>
+
+            
+        </div>
+        <div>
+            <label for="categoria">Categoría</label>
+            <select name="categoria" id="categoria" required>
+                <option>-- seleccione --</option>
+                </select> 
+        </div>
+        <div>
+            <label for="fecha_vencimiento">Fecha de Vencimiento</label>
+            <input type="date" id="fecha_v"  name="fecha_v" placeholder="Fecha de Vencimiento" required>
+
+        </div>
+        <div>
+            <label for="imagen">Imagen</label>
+            <input type="file"class="form-control"  id="imagen" name="imagen"  placeholder="URL de la Imagen" >
+        </div>
+        <div>
+            <label for="proveedor">Proveedor</label>
+            <select name="proveedor" id="proveedor" required>
+                <option>-- seleccione --</option>
+                </select> 
+        </div>
+
+        <button type="button" onclick="actualizar_producto();">Actualizar</button>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </form>
+
+    <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
+    <script ></script>
+
+    <script>listar_categorias();</script>
+    <script>listar_proveedor();</script>
+
+    <script>
+        //http://localhost/sistema_final/editar-producto/polo
+        const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina[1]; ?>;
+        ver_producto(id_p);
+    </script>
+
+</body>
+
+
+
+
+
 <head>
     <style>
  form { 
@@ -49,67 +120,3 @@
         }
     </style>
 </head>
-
-<body>
-    
-    <form action="" id="frmRegistrar">
-        <input type="hidden" name ="id_producto" id="id_producto">
-        <input type="hidden" name ="img" id="img">
-               <h1>Editar producto</h1>
-        <div>
-            <label for="codigo">Código</label>
-            <input type="text" id="codigo" name="codigo" placeholder="Código" readonly disabled>
-        </div>
-        <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre"  name="nombre" placeholder="Nombre" required>
-
-        </div>
-        <div>
-            <label for="detalle">Detalle</label>
-            <input type="text" id="detalle"  name="detalle" placeholder="Detalle" required>
-        </div>
-        <div>
-            <label for="precio">Precio</label>
-            <input type="number" id="precio"    name="precio" placeholder="Precio" required>
-
-            
-        </div>
-        <div>
-            <label for="categoria">Categoría</label>
-            <select name="categoria" id="categoria" required>
-                <option>-- seleccione --</option>
-                </select> 
-        </div>
-        <div>
-            <label for="fecha_vencimiento">Fecha de Vencimiento</label>
-            <input type="date" id="fecha_v"  name="fecha_v" placeholder="Fecha de Vencimiento" required>
-
-        </div>
-        <div>
-            <label for="imagen">Imagen</label>
-            <input type="file"class="form-control"  id="imagen" name="imagen"  placeholder="URL de la Imagen" >
-        </div>
-        <div>
-            <label for="proveedor">Proveedor</label>
-            <select name="proveedor" id="proveedor" required>
-                <option>-- seleccione --</option>
-                </select> 
-        </div>
-
-        <button type="button" onclick="registrar_producto();">Actualizar</button>
-    </form>
-
-    <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script>listar_categorias();</script>
-    <script>listar_proveedor();</script>
-
-    <script>
-        //http://localhost/sistema_final/editar-producto/polo
-        const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina[1]; ?>;
-        ver_producto(id_p);
-    </script>
-
-</body>

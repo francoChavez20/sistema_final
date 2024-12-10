@@ -1,26 +1,7 @@
 <?php
 require_once "../librerias/conexion.php";
 
-class RCategoriaModel{
-    private $conexion ;
-    function __construct()
-    {
-        $this->conexion = new Conexion();
-        $this->conexion = $this->conexion->connect();
-    }
-    public function registrarCategorias($nombre,$detalle){
-$sql = $this->conexion->query("CALL insertCategorias('{$nombre}','{$detalle}')");
 
-           $sql = $sql->fetch_object() ;
-           return $sql;                                         
-    }
-    public function ver_categoria($id){
-        $respuesta = $this->conexion->query("SELECT * FROM categoria WHERE id = '$id'");
-        $objeto = $respuesta->fetch_object();
-        return $objeto;
-
-    }
-}
 class categoriaModel
 {
     private $conexion;
@@ -47,4 +28,24 @@ class categoriaModel
     }
 }
 
+class RCategoriaModel{
+    private $conexion ;
+    function __construct()
+    {
+        $this->conexion = new Conexion();
+        $this->conexion = $this->conexion->connect();
+    }
+    public function registrarCategorias($nombre,$detalle){
+    $sql = $this->conexion->query("CALL insertCategorias('{$nombre}','{$detalle}')");
+
+           $sql = $sql->fetch_object() ;
+           return $sql;                                         
+    }
+   // public function ver_categoria($id){
+     //   $respuesta = $this->conexion->query("SELECT * FROM categoria WHERE id = '$id'");
+       // $objeto = $respuesta->fetch_object();
+        //return $objeto;
+
+    //}
+}
 ?>

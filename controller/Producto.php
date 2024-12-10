@@ -22,29 +22,35 @@ if ($tipo == "listar") {
             $r_categoria = $objCategoria->obtener_categoria($id_categoria);
             $arr_productos[$i]->categoria = $r_categoria;
 
-
-            $id_producto = $arr_productos[$i]->id;
+            $id_proveedor = $arr_productos[$i]->id_proveedor;
+            $r_proveedor = $objPersona->obtener_proveedor($id_proveedor);
+            $arr_productos[$i]->proveedor = $r_proveedor;
             //$id_producto = $arr_productos[$i]->nombre;
             //localhost/editar-producto/4
             //localhost/eliminar-producto/4
-                          
-            $opciones = '<a href="'.BASE_URL.'editar-producto/'.$id_producto.'" >Editar<a/>
+
+            $id_producto = $arr_productos[$i]->id;
+            $producto = $arr_productos[$i]->nombre;
+            $opciones ='
+            <a href="'. BASE_URL.'editar-producto/'.$id_producto.'" >Editar<a/>
             <button onclick ="eliminar_producto('.$id_producto.');">Eliminar</button>';
+           
             $arr_productos[$i]->options =  $opciones;
+            
+
+            
+        }               
+           $arr_Respuesta['status'] = true;
+        $arr_Respuesta['contenido'] = $arr_productos;   
         }
-        $arr_Respuesta['status'] = true;
-        $arr_Respuesta['contenido'] = $arr_productos;
+      echo json_encode($arr_Respuesta);
     }
-    echo json_encode($arr_Respuesta);
-}
-
-
+   
 if ($tipo == "registrar") {
     //print_r($_POST);
     //echo $_FILES['imagen']['name'];
     if ($_POST) {
         $codigo  = $_POST['codigo'];
-        $img  = $_POST['img'];
         $nombre  = $_POST['nombre'];
         $detalle  = $_POST['detalle'];
         $precio  = $_POST['precio'];
@@ -74,9 +80,9 @@ if ($tipo == "registrar") {
 
                 $nombre = $arrProducto->id_n.".".$tipoArchivo;
 
-                if (move_uploaded_file($archivo, $destino.''.$nombre)) {
+                if (move_uploaded_file($archivo, $destino . '' . $nombre)) {
                 } else {
-                    $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso, error al subir imagen');
+                    $arr_Respuestas = array('status' => true, 'mensaje' => 'Registro Exitoso, error al subir imagen');
                 }
             } else {
                 $arr_Respuestas = array('status' => false, 'mensaje' => 'Error al Registrar Producto');
@@ -90,7 +96,7 @@ if ($tipo == "registrar") {
 if($tipo =="ver"){
     //print_r($_POST);
     $id_producto = $_POST['id_producto'];
-    $arr_Respuesta = $objProducto->obtener_product($id_producto);
+    $arr_Respuesta = $objProducto->VerProducto($id_producto);
     //print_r($arr_Respuesta);
     if (empty($arr_Respuesta)){
         $response = array('status' => false, 'mensaje' => 'Error, no hay informacion');
@@ -145,6 +151,5 @@ if($tipo =="actualizar"){
 }
 
 
-if ($tipo =="eliminar"){
+//if ($tipo =="eliminar"){
     # code...
-}

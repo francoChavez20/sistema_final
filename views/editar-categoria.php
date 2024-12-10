@@ -89,8 +89,8 @@
 
 <body>
     <div class="form-container">
-        <form class="form" action="" id="RegistrarCategoria">
-            <h2>Registrar Categorias</h2>
+        <form class="form" action="" id="frmRegistrarCategoria">
+            <h2>Editar Categorias</h2>
             <div>
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -109,8 +109,8 @@
     <script src="<?php echo BASE_URL; ?>views/js/jquery-3.6.0.min.js"></script>
     
     <script>
-        //http://localhost/sistema_final/editar-producto/polo
+        
         const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina[1]; ?>;
-        ver_categoria(id_p);
+        editar_categoria(id_p);
     </script>
 </body>

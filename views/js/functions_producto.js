@@ -1,7 +1,7 @@
 async function listar_productos() {
      try{
         let respuesta = await fetch(base_url+'controller/Producto.php?tipo=listar');
-        json = await respuesta.json();
+        let json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
             let cont = 0;
@@ -14,11 +14,11 @@ async function listar_productos() {
                 <td>${item.codigo}</td>
                 <td>${item.nombre}</td>
                 <td>${item.stock}</td>
-                <td>${item.id_categoria}</td>
-                <td>${item.id_proveedor}</td>
-                <td>${item.options}</td>
-                `;
-                document.querySelector('#tbl_producto').appendChild(nueva_fila);
+                <td>${item.categoria.nombre}</td>
+                <td>${item.proveedor.razon_social}</td>
+                <td>${item.options}</td> `;
+                
+                document.querySelector('#tbl_productos').appendChild(nueva_fila);
             });
         }
         console.log (json);
@@ -27,7 +27,7 @@ async function listar_productos() {
      }
 }
 
-if (document.querySelector('#tbl_producto') ) {
+if (document.querySelector('#tbl_productos')) {
     listar_productos();
 }
 
@@ -78,10 +78,12 @@ async function listar_categorias() {
 
                 let datos = json.contenido;
                 let contenido_select = '<option value="">Seleccione</option>';
-                  //se trabaja con jquery
+
                 datos.forEach(element =>{
-                    contenido_select += `<option value="${element.id}">${element.nombre}</option>`
-                   /* $('#categoria').append($('<option  />',{
+                    contenido_select += '<option value="' + element.id +'">'+ element.nombre + '</option>';
+                   
+                   //se trabaja con jquery
+                    /* $('#categoria').append($('<option  />',{
                         text:  `${element.nombre}`,
                         value: `${element.id}`
 
@@ -94,7 +96,7 @@ async function listar_categorias() {
              console.log(respuesta);
     } catch (e) {
         console.log("Error al cargar categorias" +
-            e);
+            error);
     }
 
 }
@@ -104,11 +106,12 @@ async function listar_proveedor() {
         let respuesta = await fetch(base_url + 
             'controller/proveedor.php?tipo=listar');
             json = await respuesta.json();
-            if (json.status) {
 
+            if (json.status) {
                 let datos = json.contenido;
                 let contenido_select = '<option value="">Seleccione</option>';
-                  //se trabaja con jquery
+                  
+                //se trabaja con jquery
                 datos.forEach(element =>{
                     contenido_select += `<option value="${element.id}">${element.razon_social}</option>`
                    /* $('#categoria').append($('<option  />',{
@@ -119,12 +122,14 @@ async function listar_proveedor() {
                 });
                 document.getElementById('proveedor').innerHTML =
                 contenido_select;
+            }else{
+                console.log("No se encontraron proveedores. ");
             }
 
              console.log(respuesta);
-    } catch (e) {
+    } catch (error) {
         console.log("Error al cargar proveedor" +
-            e);
+            error);
     }
 
 }
@@ -175,9 +180,15 @@ async function actualizar_producto() {
             body: datos
         });
         json = await respuesta.json();
+        if (json.status){
+            swal("Registro", json.mensaje, "success")
+        }else{
+            swal("Registro", json.mensaje, "error")
+
+        }
     console.log(json);
     }catch(e){
-       
+       console.log("Oops ocurrio un error"+ e )
     }
     
 
