@@ -18,7 +18,7 @@ if ($tipo == "listar") {
         for ($i = 0; $i < count($arr_compra); $i++) {
 
             $id_producto = $arr_compra[$i]->id_producto;
-            $r_producto = $objProducto->obtener_product($id_producto);
+            $r_producto = $objProducto->obtener_producto($id_producto);
             $arr_compra[$i]->producto = $r_producto;
 
             $id_trabajador = $arr_compra[$i]->id_trabajador; // Obtén el ID del proveedor relacionado con el producto
