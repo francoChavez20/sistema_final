@@ -11,7 +11,8 @@
         text-align: center;
         font-family: 'Times New Roman', Times, serif; ">
     <h1><strong> Todo lo que deceas para damas, encuentralo aqui!</strong></h1>
-    <p style="color: rgb(124, 0, 196);">Nuestras prendas más populares en función de las ventas. Atualizado
+    <p style="color: rgb(124, 0, 196);">Nuestras prendas más populares en función de las ventas. Atualizado siuuu
+        
         frecuentemente.</p>
 </div>
 
